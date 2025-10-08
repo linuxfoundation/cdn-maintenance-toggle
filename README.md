@@ -1,16 +1,16 @@
 # CDN maintenance toggle script
 
-This script disables/enables CDN services operating on AWS Cloudfront by
+This script disables or enables CDN services operating on AWS Cloudfront by
 setting them into maintenance mode, implemented as a Cloudfront edge function
 returning an HTML maintenance page.
 
 Features include:
 
-- Specify matching domain wildcards to limit affected Cloudfront services in
+- Wildcard Domain Matching: Specify matching domain wildcards to limit affected Cloudfront services in
   the current AWS account/region.
-- Provide IP addresses that are allowed to bypass the outage page for a
+- IP Whitelisting: Provide IP addresses that are allowed to bypass the outage page for a
   disabled site.
-- Specify a custom HTML template for the outage page.
+- Custom Maintenance Page: Specify a custom HTML template for the outage page.
 
 For more details, run the script with the `--help` option.
 
@@ -48,6 +48,5 @@ pip install --user boto3 trieregex
 
 ## Customization
 
-The HTML template `lfx-maintenance.html` is provided as an example of an outage
-page used by the Linux Foundation for LFX Platform maintanance. Remove any
+The HTML template `lfx-maintenance.html` is used to display a maintainance message when CDN servers are disabled. It provided as an example of an outage page used by the Linux Foundation for LFX Platform maintanance. Remove any
 Linux Foundation / LFX branding before using this with any other sites.
