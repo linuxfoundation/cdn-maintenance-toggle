@@ -3,6 +3,7 @@
 
 megalinter-reports
 .ruff_cache/
+.mypy_cache/
 __pycache__/
 
 # Normally, committing lockfiles is a best practice. But 1) this is a local

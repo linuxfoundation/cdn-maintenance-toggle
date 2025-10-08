@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.12
+#!/usr/bin/env python3.13
 #
 # Copyright The Linux Foundation and each contributor to LFX.
 # SPDX-License-Identifier: MIT
@@ -8,6 +8,10 @@
 This script disables/enables CDN services operating on AWS Cloudfront by
 setting them into maintenance mode, implemented as a Cloudfront edge function
 returning an HTML maintenance page.
+
+Usage:
+
+    uv run cdn_maintenance_toggle.py --help
 """
 
 import argparse
