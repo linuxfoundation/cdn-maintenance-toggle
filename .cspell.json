@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": ["companies", "filetypes", "fullstack", "softwareTerms"],
+  "words": [
+    "boto3",
+    "botocore",
+    "cloudfront",
+    "dotenv",
+    "linuxfoundation",
+    "lfx",
+    "trieregex"
+  ],
+  "flagWords": [],
+  "ignorePaths": [
+    ".cspell.json",
+    "CODEOWNERS",
+    "LICENSE",
+    "LICENSE-docs",
+    "megalinter-reports"
+  ]
+}
