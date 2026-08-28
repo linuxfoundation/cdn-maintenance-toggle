@@ -15,8 +15,8 @@ lint:
 	uv run mypy *.py
 
 megalinter:
-	docker pull oxsecurity/megalinter-python:v7
-	docker run --rm --platform linux/amd64 -v '$(CURDIR):/tmp/lint:rw' oxsecurity/megalinter-python:v7
+	docker pull ghcr.io/oxsecurity/megalinter-python:v9.6.0@sha256:474b08825d1f6aaa595f568eb85e5730730ed1440c224b49914cabf4b9e92f3c
+	docker run --rm --platform linux/amd64 -v '$(CURDIR):/tmp/lint:rw' ghcr.io/oxsecurity/megalinter-python:v9.6.0@sha256:474b08825d1f6aaa595f568eb85e5730730ed1440c224b49914cabf4b9e92f3c
 
 test:
 	@echo "No tests to run ... would you like to 'make lint'?" >&2

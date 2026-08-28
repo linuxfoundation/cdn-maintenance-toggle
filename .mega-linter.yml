@@ -13,9 +13,12 @@ DISABLE_LINTERS:
   - REPOSITORY_GRYPE
   - REPOSITORY_TRIVY
   - REPOSITORY_TRIVY_SBOM
-  # cspell is laughably bad at code/comments/etc.
-  - SPELL_CSPELL
   # Link checking more likely to cause false positives than be useful for us.
   - SPELL_LYCHEE
+DISABLE_ERRORS_LINTERS:
+  # There's no easy local feedback loop for spelling issues before
+  # pushing, so keep them non-blocking to avoid unnecessary PR cycles
+  # for words that just need adding to the dictionary.
+  - SPELL_CSPELL
 GITHUB_COMMENT_REPORTER: false
 GITHUB_STATUS_REPORTER: true
